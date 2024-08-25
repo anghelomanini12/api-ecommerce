@@ -33,8 +33,7 @@ test("POST -> BASE_URL, should return statusCode 201, res.body.name === category
   expect(res.statusCode).toBe(201)
   expect(res.body).toBeDefined()
   expect(res.body.name).toBe(category.name)
-})//! by Fernando
-
+})
 test("GET --> BASE_URL, should return statusCode 200, and res.body.length === 1", async () => {
   const res = await request(app)
     .get(BASE_URL)
@@ -42,11 +41,11 @@ test("GET --> BASE_URL, should return statusCode 200, and res.body.length === 1"
   expect(res.statusCode).toBe(200)
   expect(res.body).toBeDefined()
   expect(res.body).toHaveLength(1)
-}) //! by Fernando
+})
 
 test("DELETE -> BASE_URL/categoryId, should return statusCode 204, and res.body.name === category.name", async () => {
   const res = await request(app)
     .delete(`${BASE_URL}/${categoryId}`)
     .set('Authorization', `Bearer ${TOKEN}`)
   expect(res.statusCode).toBe(204)
-})//! by Jose María
+})

@@ -16,7 +16,7 @@ const getAll = catchError(async (req, res) => {
         include: [
           {
             model: Category,
-            attributes: ['name']
+            attributes: ['name','id']
           
           },
           {

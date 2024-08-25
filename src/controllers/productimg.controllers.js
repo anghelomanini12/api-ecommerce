@@ -13,7 +13,7 @@ const create = catchError(async (req, res) => {
 
   //req.protocol -> http || https
   //req.headers.host -> localhost:8080
-  //req.file.filename; -> boca.jpg
+  //req.file.filename; -> xd.jpg
   //http://localhost:8080/uploads/imagen01.jpg
 
   const filename = req.file.filename;

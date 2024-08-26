@@ -32,5 +32,10 @@ User.beforeCreate(async (user) => {
   const hashPassword = await bcrypt.hash(password, 10)
   user.password = hashPassword
 })
+User.prototype.toJSON = function () {
+  const values = { ...this.get() };
+  delete values.password;
+  return values;
+};
 
 module.exports = User;
